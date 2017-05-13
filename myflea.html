@@ -10,6 +10,7 @@
     <link href="css/myfea.css" rel="stylesheet">
 </head>
 <body>
+
 <div class="row" style="height: 50px;line-height: 50px; background-color: ghostwhite;">
     <div class="col-md-1"></div>
     <div class="col-md-2">
@@ -19,13 +20,13 @@
     <div class="col-md-2">
         <div class="btn-group" role="group" aria-label="...">
             <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>我的消息</button>
-            <button type="button" class="btn btn-default"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>回到首页</button>
+            <button type="button" class="btn btn-default"><a href="index.html"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>回到首页</a></button>
         </div>
     </div>
     <div class="col-md-1"></div>
 </div>
+<div class="container">
 <div class="row">
-    <div class="col-md-1"></div>
     <div class="col-md-2">
         <div class="list-group" >
             <a href="#" class="list-group-item active">
@@ -36,11 +37,10 @@
             <a href="#" class="list-group-item"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> 待付款</a>
             <a href="#" class="list-group-item"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 待收货</a>
             <a href="#" class="list-group-item"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> 我的收藏</a>
-            <a href="#" class="list-group-item"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span> 退款退货</a>
+            <!--<a href="#" class="list-group-item"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span> 退款退货</a>-->
         </div>
     </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-6" style="padding-top: 50px;">
+    <div class="col-md-10" style="padding-top: 50px;">
         <table class="table table-bordered">
             <tr>
                 <td colspan="2" align="center"><h4><strong>个人信息</strong></h4></td>
@@ -65,24 +65,183 @@
                 <td colspan="2" align="center"><a href="#"><strong>修改信息</strong></a></td>
             </tr>
         </table>
-        <table class="table table-bordered">
+        <table class="table" id="yimai">
+            <caption>已买到的</caption>
+            <thead>
             <tr>
-                <td colspan="3" align="center"><h4><strong>已买到的</strong></h4></td>
+                <th>#</th>
+                <th>名称</th>
+                <th>价格</th>
+                <th>卖家</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
             </tr>
             <tr>
-                <td><strong>名称</strong></td>
-                <td><strong>价格</strong></td>
-                <td><strong>卖家</strong></td>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
             </tr>
             <tr>
-                <td>鞋子</td>
-                <td>34</td>
-                <td>一个小小</td>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
             </tr>
+            </tbody>
+        </table>
+        <table class="table" id="yifa">
+            <caption>已发布的</caption>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>价格</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>已卖出</td>
+                <td><a href="#">删除</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>在售</td>
+                <td><a href="#">删除</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><a href="#">删除</a> </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table" id="daifu">
+            <caption>待付款</caption>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>价格</th>
+                <th>卖家</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><a href="#">付款</a> / <a href="#">取消订单</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><a href="#">付款</a> / <a href="#">取消订单</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><a href="#">付款</a> / <a href="#">取消订单</a> </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table" id="daishou">
+            <caption>待收货</caption>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>价格</th>
+                <th>卖家</th>
+                <th>订单号</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>11111111111 </td>
+                <td><a href="#">确认收货</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>11111111111 </td>
+                <td><a href="#">确认收货</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td>11111111111 </td>
+                <td><a href="#">确认收货</a> </td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="table" id="shoucang">
+            <caption>我的收藏</caption>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>名称</th>
+                <th>价格</th>
+                <th>卖家</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><a href="#">取消收藏</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><a href="#">取消收藏</a> </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><a href="#">取消收藏</a> </td>
+            </tr>
+            </tbody>
         </table>
     </div>
-    <div class="col-md-1"></div>
 </div>
-
+</div>
 </body>
 </html>
